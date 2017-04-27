@@ -1,4 +1,4 @@
-setwd("~/Documents/msan622_data_visualization/hw/Homework 3")
+#setwd("~/Documents/msan622_data_visualization/hw/Homework 3")
 cat('\014')
 rm(list = ls())
 library(ggplot2)
