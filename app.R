@@ -5,7 +5,6 @@ library(ggplot2)
 library(shiny)
 library(reshape2)
 library(GGally )
-library(pairsD3)
 library(plotly)
 
 facebook <- read.csv('dataset_Facebook.csv',sep = ';')
