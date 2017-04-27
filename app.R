@@ -1,11 +1,23 @@
-#setwd("~/Documents/msan622_data_visualization/hw/Homework 3")
+setwd("~/Documents/msan622_data_visualization/hw/Homework 3")
 cat('\014')
 rm(list = ls())
 library(ggplot2)
 library(shiny)
 library(reshape2)
-library(GGally )
-library(plotly)
+
+package_check <- require("plotly")
+if (package_check == FALSE) {
+  install.packages('plotly')
+}
+library("plotly")  
+
+package_check <- require("GGally")
+if (package_check == FALSE) {
+  install.packages('GGally')
+}
+library("GGally")  
+
+
 
 facebook <- read.csv('dataset_Facebook.csv',sep = ';')
 
