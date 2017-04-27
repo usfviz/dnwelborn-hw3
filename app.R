@@ -46,7 +46,7 @@ ui <- fluidPage(
                                                                                 "December"))),
       tabPanel("Small Multiples",plotlyOutput("Plot_2", width = "100%") ,
                sidebarPanel(
-                 selectInput('var', 'Y Variable', c('Likes','Comments','Shares')))),
+                 selectInput('var', 'Interaction Type', c('Likes','Comments','Shares')))),
       tabPanel("Parallel Coordinates Plot", plotlyOutput("Plot_3"),selectizeInput("day", "Select day to view:",
                                                                                  choices = c("All", "Monday", "Tuesday",
                                                                                              "Wednesday", "Thursday", "Friday",
@@ -113,7 +113,7 @@ server <- function(input, output) {
     plt <- ggplot(month_week_interactions, aes(y=y_ax(), x=Day))
     plt <- plt + geom_bar(stat = 'identity', aes(fill = Day))
     plt <- plt + facet_wrap(~Month) 
-    plt <- plt + ggtitle("Small Multiples in R")
+    #plt <- plt + ggtitle("Interaction Small Multiples")
     plt <- plt + ylab('') + theme_bw() + theme(legend.title = element_blank(), axis.title.x=element_text(vjust=0.9, size = 12)) + xlab('\n \n \n Day of the Week')
     plt <- plt + theme(plot.title = element_text(family="Trebuchet MS", face="bold", size=20, hjust=0, color='#555555')) 
     plt <- plt + scale_fill_manual(values = c('#fbb4ae','#b3cde3','#ccebc5','#decbe4','#fed9a6','#ffffcc','#e5d8bd'))
