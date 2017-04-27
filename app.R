@@ -35,7 +35,7 @@ month_week_interactions$Month <- as.factor(month_week_interactions$Month)
 
 
 ui <- fluidPage(
-  headerPanel('Derek Welborn: Data Viz Master'),
+  headerPanel('Derek Welborn : Homework 3'),
   mainPanel(
     tabsetPanel(
       tabPanel("Bubble Plot", plotlyOutput("Plot_1"),selectizeInput("month", "Select month to view:",
